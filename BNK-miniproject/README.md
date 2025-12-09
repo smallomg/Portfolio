@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# 🐟 BNK 아쿠아리움 예약 시스템 (Mini Project)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> **"부산의 바다를 담다, 편리한 예약과 관람을 위한 아쿠아리움 웹 서비스"**  
+> 실제 운영 중인 아쿠아리움 사이트를 벤치마킹하여, 회원가입부터 티켓 예매, 관리자 통계까지 구현한 웹 프로젝트입니다.
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+## Project Info
+- **프로젝트 명:** BNK 아쿠아리움 (가칭)
+- **개발 기간:** 202X.05.21 ~ 202X.05.27 (7일)
+- **참여 인원:** 4명 (풀스택 개발)
+- **주요 목표:** 
+  - 사용자 편의를 위한 직관적인 티켓 예매 시스템 구축
+  - 관리자 페이지를 통한 매출/이용객 데이터 시각화
+  - Java와 JDBC를 활용한 탄탄한 백엔드 로직 구현
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend
+<img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white"> <img src="https://img.shields.io/badge/JSP-E34F26?style=for-the-badge&logo=html5&logoColor=white">
 
-### `npm test`
+### Frontend
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Tools
+<img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white"> <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
 
-### `npm run build`
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ERD & Database Logic
+**(주요 테이블 설계 로직)**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+단순한 상품 구매를 넘어, 실제 티켓 사용 처리를 위해 **1:N 구조의 티켓 발급 시스템**을 설계했습니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Items (상품)**: 아쿠아리움 입장권, 패키지 등 상품 정보
+2. **Orders (주문)**: 고객이 결제한 내역 (주문번호 생성)
+3. **Issued_Ticket (발급된 티켓)**: 
+   - *Issue*: 수량 2개 구매 시, 주문 내역은 1개지만 입장권은 2개가 발급되어야 함
+   - *Solution*: 주문(Orders) 테이블 하위에 개별 식별 번호(UUID 등)를 가진 **발급 티켓 테이블**을 별도로 설계하여 개별 사용 여부 관리
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Key Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| 구분 | 기능 | 설명 |
+| --- | --- | --- |
+| **회원** | 인증/인가 | 자체 암호화 로직을 적용한 회원가입 및 로그인/로그아웃 |
+| **티켓** | 예매/발급 | 상품 조회 및 장바구니, 결제 후 고유 이용권 번호 발급 |
+| **게시판** | **고객센터** | **QnA(1:1문의), FAQ, 공지사항 게시판 및 다중 조건 검색** |
+| **관리자** | 통계/관리 | 일간/주간 매출 보고서, 연령별 이용객 시각화(Chart), 회원 관리 |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## My Role (담당 업무)
 
-## Learn More
+**담당 역할: 게시판(Board) 기능 전반 및 통합 검색 구현**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1. 게시판(QnA/FAQ/Notice) CRUD 구현
+- **MVC 패턴 적용**: `BoardController`, `BoardService`, `BoardDao` 구조로 역할 분리
+- **QnA (1:1 문의)**: 회원이 문의 글 작성 시 관리자가 답글을 달 수 있는 계층형 구조 설계
+- **FAQ / 공지사항**: 자주 묻는 질문과 중요 공지를 관리자가 효율적으로 등록/수정/삭제하는 기능 구현
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 2. 다중 조건 검색 (Search)
+- **동적 쿼리 활용**: 단순 키워드 검색을 넘어 제목, 내용, 작성자 등 **다양한 조건(Filter)**으로 데이터를 필터링할 수 있도록 SQL 쿼리 작성
+- **데이터 기반 추천**: 검색 데이터를 바탕으로 고객이 자주 찾는 정보를 FAQ 상단에 노출하는 로직 구상
 
-### Code Splitting
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Trouble Shooting (성장 경험)
 
-### Analyzing the Bundle Size
+### 🚀 문제 상황: 이용권의 개별 식별 문제
+사용자가 '입장권'을 2매 구매했을 때, `Order` 테이블에는 '수량: 2'로 저장되지만, 실제 입장 시에는 **두 장의 티켓을 각각 확인(사용 처리)** 해야 하는 문제가 있었습니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 🔧 해결 과정
+- 기존 `ino(상품코드)`만으로는 개별 티켓을 구분할 수 없음을 파악했습니다.
+- **`issued_ticket` 테이블을 추가 설계**하여, 주문이 완료되면 구매 수량만큼 `Loop`를 돌며 고유한 `Ticket_ID`를 가진 레코드를 생성하도록 로직을 개선했습니다.
+- 이를 통해 티켓별로 '사용 완료', '미사용', '만료' 상태를 각각 관리할 수 있게 되었습니다.
 
-### Making a Progressive Web App
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Presentation
+프로젝트 발표 자료 및 시연 화면은 아래 링크에서 확인할 수 있습니다.
+- [📄 발표 자료 (PPT) 보기](./화면구성_및_참고자료.pptx) (파일이 있다면 링크 연결)
