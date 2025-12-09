@@ -43,15 +43,21 @@
 <br>
 
 ### 2. BNK-miniproject (학원 미니 프로젝트)
-> **소개:** Spring과 MyBatis를 활용한 **아쿠아리움 티켓 예약 웹사이트**
+> **소개:** Spring과 MyBatis를 활용한 **아쿠아리움 티켓 예약 및 관리 시스템**  
 > **개발 기간:** 2025.05.21 ~ 2025.05.27 (1주)
 
-메인 프로젝트를 진행하기 전, **Spring Framework와 MyBatis, OracleDB**의 연동 구조를 익히기 위해 진행한 프로젝트입니다. 실제 아쿠아리움 사이트를 벤치마킹하여 티켓 예매와 고객 센터 기능을 구현했습니다.
+메인 프로젝트 진행 전, **Spring Framework와 MyBatis**의 동작 원리를 익히고 MVC 패턴을 확실하게 이해하기 위해 진행한 프로젝트입니다.
+`jsp:include`를 활용하여 재사용 가능한 템플릿 구조를 구축했습니다.
 
-- **Tech Stack**: `Java`, `Spring`, `MyBatis`, `OracleDB`, `JSP`
+- **Tech Stack**:
+  - **Frontend**: `HTML/CSS`, `JavaScript`, `JSTL`
+  - **Backend**: `Java`, `Spring Framework`, `JSP`, `MyBatis`
+  - **Database**: `OracleDB`
+  - **Features**: `Chart.js` (데이터 시각화), 양방향 암호화 로직 적용
 - **My Role**:
-  - **게시판 구현**: QnA(1:1문의), FAQ, 공지사항 등록/수정/삭제(CRUD) 로직 개발
-  - **검색 기능**: 동적 쿼리를 활용한 게시글 다중 조건 검색(제목, 내용 등) 구현
+  - **게시판 기능**: QnA(1:1문의), FAQ, 공지사항 CRUD 및 답글 계층형 구조 구현
+  - **검색 시스템**: MyBatis 동적 쿼리(`<if>`, `<choose>`)를 활용한 다중 조건 검색 기능
+  - **협업**: 팀원들과의 코드 통합 
 - **GitHub**: [📂 소스코드 보러가기](https://github.com/smallomg/Portfolio/tree/main/BNK-miniproject)
 <br>
 
