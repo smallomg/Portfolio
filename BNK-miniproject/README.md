@@ -5,7 +5,7 @@
 
 <br>
 
-## Project Info
+## Project Info(프로젝트 정보)
 - **프로젝트 명:** BNK 아쿠아리움 
 - **개발 기간:** 2025.05.21 ~ 2025.05.27 (7일)
 - **참여 인원:** 4명 (풀스택 개발)
@@ -16,16 +16,16 @@
 
 <br>
 
-## Tech Stack
+## Tech Stack(기술 스택)
 
-### Backend
+### Backend(백엔드)
 <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"> <img src="https://img.shields.io/badge/MyBatis-000000?style=for-the-badge&logo=fluentd&logoColor=white"> <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
 
-### Frontend
+### Frontend(프런트엔드)
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 <img src="https://img.shields.io/badge/JSTL-black?style=for-the-badge&logo=java&logoColor=white">
 
-### Tools & Library
+### Tools & Library(도구 및 라이브러리)
 <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white"> <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white"> <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
 
 <br>
