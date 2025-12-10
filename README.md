@@ -25,7 +25,7 @@
 ## Projects Timeline
 
 ### 1. BNK Financial Platform (Web & Mobile Integration)
-> **BNK 금융 서비스를 벤치마킹한 차세대 금융 플랫폼 구축 프로젝트**  
+> **BNK 카드 발급 및 관리 구축 프로젝트**  
 > **기간:** 2025.06 ~ 2025.08 (팀 프로젝트)
 
 금융 서비스의 **운영(Back-office)부터 데이터 분석(BI)까지 전반적인 관리자 사이클**을 전담했습니다.  
