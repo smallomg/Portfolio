@@ -24,7 +24,7 @@
 
 ## Projects Timeline
 
-### 1. BNK Financial Platform (Web & Mobile Integration)
+### 1. BNK BNK Card Project
 > **BNK 카드 발급 및 관리 구축 프로젝트**  
 > **기간:** 2025.06 ~ 2025.08 (팀 프로젝트)
 
@@ -52,7 +52,7 @@ MVC 패턴과 Spring Framework의 동작 원리를 익히기 위한 프로젝트
 
 <br>
 
-### 3. Portfolio-site (Graduation Project)
+### 3. Portfolio-site (졸업작품)
 > **기획부터 개발까지 전 과정을 경험한 개인 포트폴리오 앱/웹**  
 > **기간:** 2024.03 ~ 2024.12
 
